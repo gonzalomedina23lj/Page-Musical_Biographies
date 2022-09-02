@@ -1,10 +1,10 @@
 <div>
     <div class="search">
-        <input searchCharacter type="text" placeholder="Search">
+        <input [formControl]="searchCharacter" type="text" placeholder="Search">
     </div>
 
-    <ng-container>
-        <app-artistdetail></app-artistdetail>
+    <ng-container *ngFor="let artist of artists$ | async">
+        <app-artistdetail [artist]="artist"></app-artistdetail>
     </ng-container>
     
 </div>

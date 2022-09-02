@@ -6,6 +6,9 @@ import { ArtistsComponent } from './components/artists/artists.component';
 import { ArtistdetailComponent } from './components/artistdetail/artistdetail.component';
 import { PhotosliderComponent } from './components/photoslider/photoslider.component';
 
+import { ReactiveFormsModule } from  '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +17,9 @@ import { PhotosliderComponent } from './components/photoslider/photoslider.compo
     PhotosliderComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
